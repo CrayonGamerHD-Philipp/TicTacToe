@@ -1,6 +1,7 @@
 import random
+from language_manager import LanguageManager
 
-# 
+#
 RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
@@ -11,7 +12,7 @@ RESET = "\033[0m"
 
 # Board erstellen und ausgeben
 def print_board():
-    board = f" " + fields[1] + " | " + fields[2] + " | " + fields[3] + " \n---|---|---\n " + fields[4] + " | " + fields[5] + " | " + fields[6] + " \n---|---|---\n " + fields[7] + " | " + fields[8] + " | " + fields[9] + " "
+    board = f" {fields[1]} | " + fields[2] + " | " + fields[3] + " \n---|---|---\n " + fields[4] + " | " + fields[5] + " | " + fields[6] + " \n---|---|---\n " + fields[7] + " | " + fields[8] + " | " + fields[9] + " "
     new_board = board.replace("x", f"{PURPLE}x{RESET}")
     new_board = new_board.replace("o", f"{ORANGE}o{RESET}")
     print(new_board)
@@ -103,6 +104,11 @@ def new_game(player_number):
     print_board()
     next_step(next_player_number)
 
+
+# Initialize with a default language (e.g. 'de_DE')
+language_manager = LanguageManager(default_language='de_DE')
+
+print(language_manager.get_message("test", "TEST_TEST_123 34"))
 
 fields = {}
 player_points = {1: 0, 2: 0}
