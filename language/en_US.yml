@@ -1,0 +1,10 @@
+language: en_US
+language_name: ENGLISH
+version: '1.0'
+points: '{BLUE}Points: Player 1 - {player_points_1} | Player 2 - {player_points_2}{RESET}'
+next_game_message: 'Player {player_number}: What would you like to do? Please enter a field number!: '
+next_step_message: 'Player {player_str}: How would you like to proceed? Please enter a field number!: '
+winner: '{GREEN}Player {player_number} has won the game! Player {other_player} starts the next round.{RESET}'
+draw: '{YELLOW}No player has won! It’s a draw! Player {next_player} starts the next round.{RESET}'
+invalid_input: '{RED}Invalid input! Please select a number between 1 and 9.{RESET}'
+field_taken: '{RED}This field is already taken!{RESET}'

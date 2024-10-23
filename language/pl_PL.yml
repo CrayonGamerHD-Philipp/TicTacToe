@@ -1,0 +1,10 @@
+language: pl_PL
+language_name: POLISH
+version: '1.0'
+points: '{BLUE}Punkty: Gracz 1 - {player_points_1} | Gracz 2 - {player_points_2}{RESET}'
+next_game_message: 'Gracz {player_number}: Co chcesz zrobić? Wprowadź numer pola!: '
+next_step_message: 'Gracz {player_str}: Jak chcesz kontynuować? Wprowadź numer pola!: '
+winner: '{GREEN}Gracz {player_number} wygrał grę! Gracz {other_player} rozpoczyna następną rundę.{RESET}'
+draw: '{YELLOW}Żaden gracz nie wygrał! Remis! Gracz {next_player} rozpoczyna następną rundę.{RESET}'
+invalid_input: '{RED}Nieprawidłowy wybór! Wybierz numer od 1 do 9.{RESET}'
+field_taken: '{RED}To pole jest już zajęte!{RESET}'

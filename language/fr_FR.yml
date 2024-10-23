@@ -1,0 +1,10 @@
+language: fr_FR
+language_name: FRENCH
+version: '1.0'
+points: '{BLUE}Points: Joueur 1 - {player_points_1} | Joueur 2 - {player_points_2}{RESET}'
+next_game_message: 'Joueur {player_number}: Que voulez-vous faire? Veuillez entrer un numéro de case!: '
+next_step_message: 'Joueur {player_str}: Comment voulez-vous procéder? Veuillez entrer un numéro de case!: '
+winner: '{GREEN}Le joueur {player_number} a gagné la partie! Le joueur {other_player} commence le prochain tour.{RESET}'
+draw: '{YELLOW}Aucun joueur n’a gagné! C’est un match nul! Le joueur {next_player} commence le prochain tour.{RESET}'
+invalid_input: '{RED}Entrée invalide! Veuillez sélectionner un nombre entre 1 et 9.{RESET}'
+field_taken: '{RED}Ce champ est déjà pris!{RESET}'

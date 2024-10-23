@@ -1,0 +1,13 @@
+language: de_DE
+language_name: GERMAN
+version: '1.0'
+points: '{BLUE}Punkte: Spieler 1 - {player_points_1} | Spieler 2 - {player_points_2}{RESET}'
+next_game_message: 'Spieler {player_number}: Was tust du? Bitte Feldziffer eingeben!: '
+next_step_message: 'Spieler {player_str}: Wie willst du fortfahren? Bitte Feldziffer
+  eingeben!: '
+winner: '{GREEN}Spieler {player_number} hat das Spiel gewonnen! Spieler {other_player}
+  beginnt die nächste Runde.{RESET}'
+draw: '{YELLOW}Kein Spieler hat gewonnen! Es gibt ein Unentschieden! Spieler {next_player}
+  beginnt die nächste Runde.{RESET}'
+invalid_input: '{RED}Ungültige Eingabe! Bitte wähle eine Zahl zwischen 1 und 9.{RESET}'
+field_taken: '{RED}Dieses Feld ist bereits belegt!{RESET}'
