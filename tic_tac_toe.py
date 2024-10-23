@@ -1,6 +1,6 @@
 import random
 
-# Farben
+# 
 RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
@@ -9,7 +9,7 @@ ORANGE = "\033[38;5;214m"
 PURPLE = "\033[38;5;129m"
 RESET = "\033[0m"
 
-# Boar erstellen und ausgeben
+# Board erstellen und ausgeben
 def print_board():
     board = f" " + fields[1] + " | " + fields[2] + " | " + fields[3] + " \n---|---|---\n " + fields[4] + " | " + fields[5] + " | " + fields[6] + " \n---|---|---\n " + fields[7] + " | " + fields[8] + " | " + fields[9] + " "
     new_board = board.replace("x", f"{PURPLE}x{RESET}")
@@ -55,6 +55,7 @@ def check_winner():
 
     for player_number in ["1", "2"]:
         player_key = "x" if player_number == "1" else "o"
+        other_player = "1" if player_number == "2" else "2"
         if (fields[1] == player_key and fields[2] == player_key and fields[3] == player_key) or \
            (fields[4] == player_key and fields[5] == player_key and fields[6] == player_key) or \
            (fields[7] == player_key and fields[8] == player_key and fields[9] == player_key) or \
@@ -63,9 +64,9 @@ def check_winner():
            (fields[3] == player_key and fields[6] == player_key and fields[9] == player_key) or \
            (fields[1] == player_key and fields[5] == player_key and fields[9] == player_key) or \
            (fields[3] == player_key and fields[5] == player_key and fields[7] == player_key):
-            print(f"{GREEN}Spieler {player_number} hat das Spiel gewonnen! Er/Sie beginnt die nächste Runde.{RESET}")
+            print(f"{GREEN}Spieler {player_number} hat das Spiel gewonnen! Spieler {other_player} beginnt die nächste RUnde.{RESET}")
             player_points[int(player_number)] += 1
-            new_game(int(player_number))
+            new_game(int(other_player))
             return True
 
     return False
