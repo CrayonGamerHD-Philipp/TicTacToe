@@ -47,11 +47,6 @@ def next_step(player_int):
 
 # Gewinner überprüfen
 def check_winner():
-    if all(value == "x" or value == "o" for value in fields.values()):
-        next_player = random.choice([1, 2])
-        print(f"{YELLOW}Kein Spieler hat gewonnen! Es gibt ein Unentschieden! Spieler {next_player} beginnt die nächste Runde.{RESET}")
-        new_game(next_player)
-        return True
 
     for player_number in ["1", "2"]:
         player_key = "x" if player_number == "1" else "o"
@@ -68,6 +63,13 @@ def check_winner():
             player_points[int(player_number)] += 1
             new_game(int(other_player))
             return True
+
+    if all(value == "x" or value == "o" for value in fields.values()):
+        next_player = random.choice([1, 2])
+        print(f"{YELLOW}Kein Spieler hat gewonnen! Es gibt ein Unentschieden! Spieler {next_player} beginnt die nächste Runde.{RESET}")
+        new_game(next_player)
+        return True
+
 
     return False
 
