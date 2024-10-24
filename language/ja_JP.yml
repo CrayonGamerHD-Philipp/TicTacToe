@@ -1,0 +1,10 @@
+language: ja_JP
+language_name: JAPANESE
+version: '1.0'
+points: '{BLUE}ポイント: プレイヤー 1 - {player_points_1} | プレイヤー 2 - {player_points_2}{RESET}'
+next_game_message: 'プレイヤー {player_number}: 何をしますか? フィールド番号を入力してください: '
+next_step_message: 'プレイヤー {player_str}: 次にどうしますか? フィールド番号を入力してください: '
+winner: '{GREEN}プレイヤー {player_number} が勝利しました! プレイヤー {other_player} が次のラウンドを開始します。{RESET}'
+draw: '{YELLOW}どちらのプレイヤーも勝利していません! 引き分けです! プレイヤー {next_player} が次のラウンドを開始します。{RESET}'
+invalid_input: '{RED}無効な入力です! 1から9までの数字を選んでください。{RESET}'
+field_taken: '{RED}このフィールドは既に使用されています!{RESET}'
