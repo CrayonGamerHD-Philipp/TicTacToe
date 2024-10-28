@@ -1,0 +1,10 @@
+language: no_NO
+language_name: NORWEGIAN
+version: '1.0'
+points: '{BLUE}Poeng: Spiller 1 - {player_points_1} | Spiller 2 - {player_points_2}{RESET}'
+next_game_message: '{player_color}Spiller {player_str}{RESET}: Hva vil du gjøre? Vennligst skriv inn feltnummer!: '
+next_step_message: '{player_color}Spiller {player_str}{RESET}: Hvordan vil du fortsette? Vennligst skriv inn feltnummer!: '
+winner: '{GREEN}Spiller {player_number} har vunnet spillet! Spiller {other_player} starter neste runde.{RESET}'
+draw: '{YELLOW}Ingen spiller vant! Det er uavgjort! Spiller {next_player} starter neste runde.{RESET}'
+invalid_input: '{RED}Ugyldig inndata! Vennligst velg et tall mellom 1 og 9.{RESET}'
+field_taken: '{RED}Dette feltet er allerede opptatt!{RESET}'
