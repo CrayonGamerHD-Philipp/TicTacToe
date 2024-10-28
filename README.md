@@ -23,7 +23,8 @@ The game currently supports the following languages:
 - **日本語** (Japanese)
 - **Polski** (Polish)
 - **Türkçe** (Turkish)
-- **Norsk** (NORWEGIAN)
+- **Norsk** (Norwegian)
+- **한국인** (Korean)
 
 Players can choose the language at the start of the game.
 

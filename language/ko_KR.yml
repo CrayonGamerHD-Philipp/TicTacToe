@@ -1,0 +1,10 @@
+language: ko_KR
+language_name: KOREAN
+version: '1.0'
+points: '{BLUE}점수: 플레이어 1 - {player_points_1} | 플레이어 2 - {player_points_2}{RESET}'
+next_game_message: '{player_color}플레이어 {player_str}{RESET}: 무엇을 하시겠습니까? 필드 번호를 입력해주세요!: '
+next_step_message: '{player_color}플레이어 {player_str}{RESET}: 다음 단계는 무엇입니까? 필드 번호를 입력해주세요!: '
+winner: '{GREEN}플레이어 {player_number}님이 승리하였습니다! 다음 라운드는 플레이어 {other_player}님이 시작합니다.{RESET}'
+draw: '{YELLOW}아무도 승리하지 않았습니다! 무승부입니다! 다음 라운드는 플레이어 {next_player}님이 시작합니다.{RESET}'
+invalid_input: '{RED}잘못된 입력입니다! 1에서 9 사이의 숫자를 입력해주세요.{RESET}'
+field_taken: '{RED}해당 필드는 이미 사용 중입니다!{RESET}'
