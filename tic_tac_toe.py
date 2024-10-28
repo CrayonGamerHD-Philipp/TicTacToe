@@ -1,7 +1,7 @@
 import random
 from language_manager import LanguageManager
 
-# Farben für die Ausgabe
+# Farben
 RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
@@ -21,12 +21,13 @@ def print_board():
 def next_step(player_int):
     while not check_winner():
         player_str = str(player_int)
-        question = language_manager.get_message("next_step_message", "Spieler {player_str}: Wie willst du fortfahren? Bitte Feldziffer eingeben!: ", player_str=player_str, PURPLE=PURPLE, ORANGE=ORANGE, RESET=RESET)
-        new_question = question.replace("Spieler 1", f"{PURPLE}Spieler 1{RESET}")
-        new_question = new_question.replace("Spieler 2", f"{ORANGE}Spieler 2{RESET}")
+        player_color = PURPLE
+        if player_int == 2: player_color = ORANGE
+
+        question = language_manager.get_message("next_step_message", "{player_color}Spieler {player_str}{RESET}: Wie willst du fortfahren? Bitte Feldziffer eingeben!: ", player_str=player_str, RESET=RESET, player_color=player_color)
 
         try:
-            game_input = int(input(new_question))
+            game_input = int(input(question))
         except ValueError:
             print(language_manager.get_message("invalid_input", "{RED}Ungültige Eingabe! Bitte gib eine Zahl zwischen 1 und 9 ein.{RESET}", RED=RED, RESET=RESET))
             continue
@@ -87,12 +88,14 @@ def new_game(player_number):
 
     print_board()
 
+    player_color = PURPLE
+    if player_number == 2: player_color = ORANGE
+
     while True:
         try:
-            question = language_manager.get_message("next_game_message", "Spieler {player_number}: Was tust du? Bitte Feldziffer eingeben!: ", player_number=player_number)
-            new_question = question.replace("Spieler 1", f"{PURPLE}Spieler 1{RESET}")
-            new_question = new_question.replace("Spieler 2", f"{ORANGE}Spieler 2{RESET}")
-            start_new_game_input = int(input(new_question))
+
+            question = language_manager.get_message("next_game_message", "{player_color}Spieler {player_str}{RESET}: Was tust du? Bitte Feldziffer eingeben!: ", player_str=str(player_number), player_color=player_color, RESET=RESET)
+            start_new_game_input = int(input(question))
             if fields[start_new_game_input] not in ["x", "o"]:
                 break
             else:
