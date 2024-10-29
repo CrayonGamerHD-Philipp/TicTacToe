@@ -32,18 +32,24 @@ Players can choose the language at the start of the game.
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/tic_tac_toe_console.git
+    git clone https://github.com/CrayonGamerHD-Philipp/TicTacToe.git
     cd tic_tac_toe_console
     ```
 
-2. Run the game:
+2. Install the required MultiLanguageFramework package:
+    ```bash
+    pip install git+https://github.com/CrayonGamerHD-Philipp/MultiLanguageFramework.git
+    ```
+    This command installs the MultiLanguageFramework directly from GitHub and ensures all dependencies are automatically installed.
+
+3. Run the game:
     ```bash
     python tic_tac_toe.py
     ```
 
-3. At the start, you will be prompted to choose the language for the game.
+4. At the start, you will be prompted to choose the language for the game.
 
-4. The game will prompt each player to input the number of the field where they want to place their symbol. The fields are numbered as follows:
+5. The game will prompt each player to input the number of the field where they want to place their symbol. The fields are numbered as follows:
   ```
    1 | 2 | 3
   ---|---|---
@@ -52,11 +58,11 @@ Players can choose the language at the start of the game.
    7 | 8 | 9
   ```
 
-5. Players will alternate turns by entering the number corresponding to their desired position on the board. The game will automatically update and display the current board, including score tracking.
+6. Players will alternate turns by entering the number corresponding to their desired position on the board. The game will automatically update and display the current board, including score tracking.
 
-6. The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins the round, and the score will be updated.
+7. The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins the round, and the score will be updated.
 
-7. The game continues until players decide to exit.
+8. The game continues until players decide to exit.
 
 ## Screenshots
 
