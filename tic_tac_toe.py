@@ -10,14 +10,14 @@ ORANGE = "\033[38;5;214m"
 PURPLE = "\033[38;5;129m"
 RESET = "\033[0m"
 
-# Board erstellen und ausgeben
+# Create board and print it
 def print_board():
     board = f" " + fields[1] + " | " + fields[2] + " | " + fields[3] + " \n---|---|---\n " + fields[4] + " | " + fields[5] + " | " + fields[6] + " \n---|---|---\n " + fields[7] + " | " + fields[8] + " | " + fields[9] + " "
     new_board = board.replace("x", f"{PURPLE}x{RESET}")
     new_board = new_board.replace("o", f"{ORANGE}o{RESET}")
     print(new_board)
 
-# Nächsten Schritt
+# Next step
 def next_step(player_int):
     while not check_winner():
         player_str = str(player_int)
@@ -47,7 +47,7 @@ def next_step(player_int):
         else:
             print(language_manager.get_message("invalid_input", "{RED}Ungültige Zahl! Bitte verwende nur Zahlen zwischen 1 und 9{RESET}", RED=RED, RESET=RESET))
 
-# Gewinner überprüfen
+# Check winner
 def check_winner():
     for player_number in ["1", "2"]:
         player_key = "x" if player_number == "1" else "o"
@@ -73,7 +73,7 @@ def check_winner():
 
     return False
 
-# Neues Spiel starten
+# Start new game
 def new_game(player_number):
     global fields
     fields = {i: str(i) for i in range(1, 10)}
@@ -113,8 +113,8 @@ def new_game(player_number):
     print_board()
     next_step(next_player_number)
 
+# Language selector in the console
 def language_selector():
-    """Allows the user to select a language via the console."""
     available_languages = language_manager.get_available_languages()
 
     if not available_languages:
@@ -137,11 +137,13 @@ def language_selector():
         except ValueError:
             print("Please enter a number corresponding to your choice.")
 
+# Init LanguageManager
 language_manager = LanguageManager(default_language="de_DE")
 language_selector()
 
-
+# Standard variables
 fields = {}
 player_points = {1: 0, 2: 0}
 
+# Start first game
 new_game(1)
