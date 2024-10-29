@@ -24,12 +24,12 @@ def next_step(player_int):
         player_color = PURPLE
         if player_int == 2: player_color = ORANGE
 
-        question = language_manager.get_message("next_step_message", "{player_color}Spieler {player_str}{RESET}: Wie willst du fortfahren? Bitte Feldziffer eingeben!: ", player_str=player_str, RESET=RESET, player_color=player_color)
+        question = language_manager.get_message("next_step_message", "{player_color}Player {player_str}{RESET}: How do you want to proceed? Please enter field number!: ", player_str=player_str, RESET=RESET, player_color=player_color)
 
         try:
             game_input = int(input(question))
         except ValueError:
-            print(language_manager.get_message("invalid_input", "{RED}Ungültige Eingabe! Bitte gib eine Zahl zwischen 1 und 9 ein.{RESET}", RED=RED, RESET=RESET))
+            print(language_manager.get_message("invalid_input", "{RED}Invalid input! Please select a number between 1 and 9.{RESET}", RED=RED, RESET=RESET))
             continue
 
         if 0 < game_input <= 9:
@@ -43,9 +43,9 @@ def next_step(player_int):
                     print_board()
                     player_int = 1
             else:
-                print(language_manager.get_message("field_taken", "{RED}Dieses Feld ist bereits belegt!{RESET}", RED=RED, RESET=RESET))
+                print(language_manager.get_message("field_taken", "{RED}This field is already taken!{RESET}", RED=RED, RESET=RESET))
         else:
-            print(language_manager.get_message("invalid_input", "{RED}Ungültige Zahl! Bitte verwende nur Zahlen zwischen 1 und 9{RESET}", RED=RED, RESET=RESET))
+            print(language_manager.get_message("invalid_input", "{RED}Invalid input! Please select a number between 1 and 9.{RESET}", RED=RED, RESET=RESET))
 
 # Check winner
 def check_winner():
@@ -60,14 +60,14 @@ def check_winner():
            (fields[3] == player_key and fields[6] == player_key and fields[9] == player_key) or \
            (fields[1] == player_key and fields[5] == player_key and fields[9] == player_key) or \
            (fields[3] == player_key and fields[5] == player_key and fields[7] == player_key):
-            print(language_manager.get_message("winner", "{GREEN}Spieler {player_number} hat das Spiel gewonnen! Spieler {other_player} beginnt die nächste Runde.{RESET}", player_number=player_number, other_player=other_player, GREEN=GREEN, RESET=RESET))
+            print(language_manager.get_message("winner", "{GREEN}Player {player_number} has won the game! Player {other_player} starts the next round.{RESET}", player_number=player_number, other_player=other_player, GREEN=GREEN, RESET=RESET))
             player_points[int(player_number)] += 1
             new_game(int(other_player))
             return True
 
     if all(value == "x" or value == "o" for value in fields.values()):
         next_player = random.choice([1, 2])
-        print(language_manager.get_message("draw", "{YELLOW}Kein Spieler hat gewonnen! Es gibt ein Unentschieden! Spieler {next_player} beginnt die nächste Runde.{RESET}", next_player=next_player, YELLOW=YELLOW, RESET=RESET))
+        print(language_manager.get_message("draw", "{YELLOW}No player has won! It’s a tie! Player {next_player} starts the next round.{RESET}", next_player=next_player, YELLOW=YELLOW, RESET=RESET))
         new_game(next_player)
         return True
 
@@ -79,7 +79,7 @@ def new_game(player_number):
     fields = {i: str(i) for i in range(1, 10)}
     print(language_manager.get_message(
         "points",
-        "{BLUE}Punkte: Spieler 1 - {player_points_1} | Spieler 2 - {player_points_2}{RESET}",
+        "{BLUE}Points: Player 1 - {player_points_1} | Player 2 - {player_points_2}{RESET}",
         player_points_1=player_points[1],
         player_points_2=player_points[2],
         BLUE=BLUE,
@@ -94,14 +94,14 @@ def new_game(player_number):
     while True:
         try:
 
-            question = language_manager.get_message("next_game_message", "{player_color}Spieler {player_str}{RESET}: Was tust du? Bitte Feldziffer eingeben!: ", player_str=str(player_number), player_color=player_color, RESET=RESET)
+            question = language_manager.get_message("next_game_message", "{player_color}Player {player_str}{RESET}: What would you like to do? Please enter field number!: ", player_str=str(player_number), player_color=player_color, RESET=RESET)
             start_new_game_input = int(input(question))
             if fields[start_new_game_input] not in ["x", "o"]:
                 break
             else:
-                print(language_manager.get_message("field_taken", "{RED}Dieses Feld ist bereits belegt!{RESET}", RED=RED, RESET=RESET))
+                print(language_manager.get_message("field_taken", "{RED}This field is already taken!{RESET}", RED=RED, RESET=RESET))
         except (ValueError, KeyError):
-            print(language_manager.get_message("invalid_input", "{RED}Ungültige Eingabe! Bitte wähle eine Zahl zwischen 1 und 9.{RESET}", RED=RED, RESET=RESET))
+            print(language_manager.get_message("invalid_input", "{RED}Invalid input! Please select a number between 1 and 9.{RESET}", RED=RED, RESET=RESET))
 
     if player_number == 1:
         fields[start_new_game_input] = "x"
@@ -138,7 +138,7 @@ def language_selector():
             print("Please enter a number corresponding to your choice.")
 
 # Init LanguageManager
-language_manager = LanguageManager(default_language="de_DE")
+language_manager = LanguageManager(default_language="en_US")
 language_selector()
 
 # Standard variables
