@@ -1,12 +1,17 @@
 language: de_DE
 language_name: GERMAN
-version: '1.0'
+version: '1.3'
 points: '{BLUE}Punkte: Spieler 1 - {player_points_1} | Spieler 2 - {player_points_2}{RESET}'
-next_game_message: '{player_color}Spieler {player_str}{RESET}: Was tust du? Bitte Feldziffer eingeben!: '
-next_step_message: '{player_color}Spieler {player_str}{RESET}: Wie willst du fortfahren? Bitte Feldziffer eingeben!: '
-winner: '{GREEN}Spieler {player_number} hat das Spiel gewonnen! Spieler {other_player}
-  beginnt die nächste Runde.{RESET}'
-draw: '{YELLOW}Kein Spieler hat gewonnen! Es gibt ein Unentschieden! Spieler {next_player}
-  beginnt die nächste Runde.{RESET}'
-invalid_input: '{RED}Ungültige Eingabe! Bitte wähle eine Zahl zwischen 1 und 9.{RESET}'
+next_game_message: '{player_color}Spieler {player_str}{RESET}: Was möchtest du tun? Bitte gib eine Feldnummer ein!: '
+next_step_message: '{player_color}Spieler {player_str}{RESET}: Wie möchtest du fortfahren? Bitte gib eine Feldnummer ein!: '
+winner: '{GREEN}Spieler {player_number} hat gewonnen! Spieler {other_player} beginnt die nächste Runde.{RESET}'
+draw: '{YELLOW}Kein Spieler hat gewonnen! Es ist ein Unentschieden! Spieler {next_player} beginnt die nächste Runde.{RESET}'
+invalid_input: '{RED}Ungültige Eingabe! Bitte wähle eine Nummer zwischen 1 und 9.{RESET}'
 field_taken: '{RED}Dieses Feld ist bereits belegt!{RESET}'
+ai_move: '{ORANGE}Die KI führt ihren Zug aus...{RESET}'
+game_mode_selection: '{BLUE}Bitte wähle einen Spielmodus:{RESET}\n1. Spiele gegen einen anderen Spieler\n2. Spiele gegen die KI'
+select_game_mode: '{BLUE}Spielmodus auswählen: {RESET}'
+difficulty_selection: '{BLUE}Bitte wähle den Schwierigkeitsgrad der KI:{RESET}\n1. Einfach\n2. Mittel\n3. Schwer\n4. Extrem'
+your_choice: '{BLUE}Deine Wahl: {RESET}'
+invalid_selection: '{RED}Ungültige Auswahl! Bitte versuche es erneut.{RESET}'
+starting_game: '{GREEN}Ein neues Spiel beginnt! Spieler {starting_player} startet.{RESET}'

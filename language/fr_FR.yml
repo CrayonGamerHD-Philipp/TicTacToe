@@ -1,10 +1,15 @@
 language: fr_FR
 language_name: FRENCH
-version: '1.0'
+version: '1.1'
 points: '{BLUE}Points : Joueur 1 - {player_points_1} | Joueur 2 - {player_points_2}{RESET}'
-next_game_message: '{player_color}Joueur {player_str}{RESET} : Que voulez-vous faire ? Veuillez entrer le numéro de champ !: '
-next_step_message: '{player_color}Joueur {player_str}{RESET} : Comment voulez-vous continuer ? Veuillez entrer le numéro de champ !: '
-winner: '{GREEN}Le joueur {player_number} a gagné la partie ! Le joueur {other_player} commence le prochain tour.{RESET}'
-draw: "{YELLOW}Aucun joueur n'a gagné ! Match nul ! Le joueur {next_player} commence le prochain tour.{RESET}"
-invalid_input: '{RED}Entrée non valide ! Veuillez choisir un nombre entre 1 et 9.{RESET}'
+next_game_message: '{player_color}Joueur {player_str}{RESET} : Que voulez-vous faire ? Veuillez entrer un numéro de champ : '
+next_step_message: '{player_color}Joueur {player_str}{RESET} : Comment voulez-vous procéder ? Veuillez entrer un numéro de champ : '
+winner: '{GREEN}Joueur {player_number} a gagné ! Joueur {other_player} commence le prochain tour.{RESET}'
+draw: '{YELLOW}Aucun joueur n’a gagné ! C’est une égalité ! Joueur {next_player} commence le prochain tour.{RESET}'
+invalid_input: '{RED}Entrée invalide ! Veuillez sélectionner un numéro entre 1 et 9.{RESET}'
 field_taken: '{RED}Ce champ est déjà pris !{RESET}'
+ai_move: '{ORANGE}L’IA joue son coup...{RESET}'
+game_mode_selection: '{BLUE}Veuillez sélectionner un mode de jeu :{RESET}\n1. Jouer contre un autre joueur\n2. Jouer contre l’IA'
+difficulty_selection: '{BLUE}Veuillez sélectionner la difficulté de l’IA :{RESET}\n1. Facile\n2. Moyenne\n3. Difficile\n4. Extrême'
+invalid_selection: '{RED}Sélection invalide ! Veuillez réessayer.{RESET}'
+starting_game: '{GREEN}Démarrage d’un nouveau jeu ! Joueur {starting_player} commence.{RESET}'
