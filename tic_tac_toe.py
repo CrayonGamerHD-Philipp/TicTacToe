@@ -290,9 +290,9 @@ def new_game(player_number):
     global fields
     fields = {i: str(i) for i in range(1, 10)}
     print(language_manager.get_message("points",
-                                       "{BLUE}Points: Player 1 - {player_points_1} | Player 2 - {player_points_2}{RESET}",
-                                       player_points_1=player_points[1], player_points_2=player_points[2], BLUE=BLUE,
-                                       RESET=RESET))
+                                       "{BLUE}Points: {PURPLE}Player 1 - {player_points_1} {BLUE}| {ORANGE}Player 2 - {player_points_2}{RESET}",
+                                       player_points_1=player_points[1], player_points_2=player_points[2],
+                                       BLUE=BLUE, RESET=RESET, PURPLE=PURPLE, ORANGE=ORANGE))
     print_board()
     next_step(player_number)
 
