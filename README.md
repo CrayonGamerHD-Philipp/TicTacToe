@@ -89,6 +89,7 @@ Players can choose the language at the start of the game.
 ## Requirements
 
 - Python 3.x
+- [MultiLanguageFramework](https://github.com/CrayonGamerHD-Philipp/MultiLanguageFramework)
 
 ## License
 
