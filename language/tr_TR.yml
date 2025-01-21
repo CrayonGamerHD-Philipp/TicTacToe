@@ -1,0 +1,15 @@
+language: tr_TR
+language_name: TURKISH
+version: '1.1'
+points: '{BLUE}Puanlar: Oyuncu 1 - {player_points_1} | Oyuncu 2 - {player_points_2}{RESET}'
+next_game_message: '{player_color}Oyuncu {player_str}{RESET}: Ne yapmak istiyorsunuz? Lütfen alan numarasını girin!: '
+next_step_message: '{player_color}Oyuncu {player_str}{RESET}: Nasıl devam etmek istiyorsunuz? Lütfen alan numarasını girin!: '
+winner: '{GREEN}Oyuncu {player_number} kazandı! Oyuncu {other_player} bir sonraki turu başlatır.{RESET}'
+draw: '{YELLOW}Hiçbir oyuncu kazanmadı! Beraberlik! Oyuncu {next_player} bir sonraki turu başlatır.{RESET}'
+invalid_input: '{RED}Geçersiz giriş! Lütfen 1 ile 9 arasında bir sayı seçin.{RESET}'
+field_taken: '{RED}Bu alan zaten alınmış!{RESET}'
+ai_move: '{ORANGE}Yapay Zeka hamlesini yapıyor...{RESET}'
+game_mode_selection: '{BLUE}Lütfen bir oyun modu seçin:{RESET}\n1. Başka bir oyuncuya karşı oyna\n2. Yapay Zekaya karşı oyna'
+difficulty_selection: '{BLUE}Lütfen Yapay Zeka zorluk seviyesini seçin:{RESET}\n1. Kolay\n2. Orta\n3. Zor\n4. Aşırı'
+invalid_selection: '{RED}Geçersiz seçim! Lütfen tekrar deneyin.{RESET}'
+starting_game: '{GREEN}Yeni bir oyun başlıyor! Oyuncu {starting_player} başlıyor.{RESET}'
